@@ -474,7 +474,7 @@ export default function PackageView() {
                                                     <h6 className="card-title">{pkg.packageName}</h6>
                                                     <p className="card-text">Price: ₹{pkg.price}</p>
                                                     <p className="card-text">{pkg.city}</p>
-                                                    <Link to={`/package/${pkg.id}`} className="btn dorne-btn w-100">View Package</Link>
+                                                    <Link to={`/view/${pkg.id}`} className="btn dorne-btn w-100">View Package</Link>
                                                 </div>
                                             </div>
                                         ))}
