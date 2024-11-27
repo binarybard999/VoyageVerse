@@ -407,10 +407,13 @@ export default function SingleListing() {
     const [reviewLoading, setReviewLoading] = useState(false);
 
     useEffect(() => {
-        fetchPackageData();
-        fetchReviews();
+        const fetchData = async () => {
+            await fetchPackageData();
+            await fetchReviews();
+        };
+        fetchData();
     }, [id]);
-
+    
     const fetchPackageData = async () => {
         try {
             const docRef = doc(db, 'packages', id);

@@ -34,11 +34,13 @@ import ManageReviews from './components/admin/reviews/ManageReviews';
 
 import UserProfile from './components/users/UserProfile';
 import Error from './components/pages/Error';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
     return (
         <>
             <BrowserRouter>
+                <ScrollToTop />
                 <Routes>
                     <Route path='/' element={<Master />}>
                         <Route path='/' element={<Home />} />
